@@ -6,7 +6,7 @@ $fn=50;
 nozzle_tolerance = 0.12; //mm over-size nozzle hole
 
 font =  "Arial Narrow";
-model = "iwob"; //set this to iwob2, iwob, or nelson
+model = "nelson"; //set this to iwob2, iwob, or nelson
 size = 16;
 nelson_size = 36;
 
@@ -15,17 +15,17 @@ if (model == "iwob2") {
 } else if (model == "iwob") {
 	iwob_nozzle(size);
 } else if (model == "nelson") {
-	nelson_nozzle(size);
+	nelson_nozzle(nelson_size);
 } else {
 	//otherwise comment out what you don't want, and set the size
 	//number in the example calls below:
 
-	iwob2_nozzle(size); //size 18 /64ths inch
+	iwob2_nozzle(size);
 	translate([0,-25, 0])
-		iwob_nozzle(size); //size 18 /64ths inch
+		iwob_nozzle(size);
 
 	translate([0,25,0])
-		nelson_nozzle(nelson_size); //size 36 /128ths inch (same as iwob 18)
+		nelson_nozzle(nelson_size);
 }
 
 //Create an iWob nozzle of a given size, which is
@@ -271,6 +271,8 @@ module iwob2_nozzle(nozzle_number) {
 module nelson_nozzle(nelson_nozzle_number) {
 
 	nozzle_radius = (nelson_nozzle_number / 128.0 * 25.4 + nozzle_tolerance) / 2;
+	//echo (nelson_nozzle_number);
+	//echo ("nozzle radius is ", nozzle_radius);
 	difference() {
 		//Outer shape
 
