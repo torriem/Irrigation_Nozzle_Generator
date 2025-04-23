@@ -16,3 +16,7 @@ openscad -D 'model="iwob"' -D 'size=19.5' -o iwob_19_5.stl irrigation_nozzle.sca
 ```
 
 A script could generate a complete set of stl files using these parameters.
+
+![example1](example1.png)
+![example2](example2.png)
+
