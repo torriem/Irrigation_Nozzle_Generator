@@ -1,3 +1,6 @@
+/* Copyright 2024 Michael Torrie */
+/* Licensed under the terms of the GPLv3 */
+
 $fn=50;
 /* If using command line, use -D 'model="xxx"' where xxx is one of
    iwob, iwob2, or nelson.  Use -D 'size=##' to set the size, using
@@ -6,8 +9,8 @@ $fn=50;
 nozzle_tolerance = 0.12; //mm over-size nozzle hole
 
 font =  "Arial Narrow";
-model = "nelson"; //set this to iwob2, iwob, or nelson
-size = 16;
+model = "iwob"; //set this to iwob2, iwob, or nelson
+size = 10;
 nelson_size = 36;
 
 if (model == "iwob2") {
