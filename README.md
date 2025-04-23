@@ -9,6 +9,8 @@ There are several parameters in the SCAD file that can be changed:
 - model - one of "iwob" "iwob2" "nelson" or "all".  Specify what kind of nozzle to create.  All creates one of each kind in the same file
 - nozzle_tolerance - how many mm oversize to make the hole, to account for printer inprecision.  For the X1 Carbon with ABS, 0.12mm oversize ends up about right.  Can measure certain sizes with drill bit shanks.
 
+I recommend printing the IWob2-style nozzles on the angled flat face that the number is embossed in.  Should print without any supports on most printers. The other nozzles can be printed in the verticle orientation without supports.
+
 Those parameters can be passed on the command-line with `-D`.  For example:
 
 ```
